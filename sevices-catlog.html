@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>services Catalog</title>
+<style>
+  .services-catalog-homepage{
+  }
+  .services-catalog-homepage .card{
+    display:flex
+  }
+</style>
+</head>
+<body>
+<div class="services-catalog-homepage " >
+  <div class="clearfix text-center mb-4" data-lfr-editable-id="fragment-1-heading" data-lfr-editable-type="rich-text">
+    <h2> <span class="clearfix"> Card Title example </span> </h2>
+  </div>
+  <div class="row service-inner " id="${fragmentEntryLinkNamespace}-serviceInner">
+
+
+    [#list 0..configuration.numberOfCards-1 as i]
+    [#assign index = "${i+1}" /]
+
+    [#if i lt 9]
+    [#assign index = "0${i+1}" /]
+    [/#if]
+    <div class="col col-lg-3 col-sm-12 col-12 col-md-3">
+      <div class="[#if i == 0]active[/#if] card service-item" id="${fragmentEntryLinkNamespace}-service-item-${i+1}">
+        <img alt="Responsive Image ${i+1}" class="w-100" data-lfr-editable-id="${index}-01-image" data-lfr-editable-type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAEOCAYAAABRmsRnAAAACXBIWXMAAC4jAAAuIwF4pT92AAAK9klEQVR4Xu3VUQnAMBAFwcS/kEA9VFsLEXH7M2fgwXCw+zzvtxwBAgQIECAwKrAFeNTbGAECBAgQuAIC7BEIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAgLsBwgQIECAQCAgwAG6SQIECBAgIMB+gAABAgQIBAICHKCbJECAAAECAuwHCBAgQIBAICDAAbpJAgQIECAgwH6AAAECBAgEAgIcoJskQIAAAQIC7AcIECBAgEAgIMABukkCBAgQICDAfoAAAQIECAQCAhygmyRAgAABAj/ibTjyR8Zs7wAAAABJRU5ErkJggg==" />
+
+        <div class="service-caption  card-body d-lg-block  d-none">
+          <div class="card-title" data-lfr-editable-id="${index}-02-title" data-lfr-editable-type="rich-text">
+            <h2>
+              Slide ${i+1} Title
+            </h2>
+          </div>
+          <div class="card-links">
+            <a class="btn btn-primary" data-lfr-editable-id="${index}-03-link" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-01-03-link">
+              Go Somewhere
+            </a>
+            <a class="btn btn-primary" data-lfr-editable-id="${index}-04-link" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-01-04-link">
+              Go Somewhere
+            </a>
+            <a class="btn btn-primary" data-lfr-editable-id="${index}-05-link" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-01-05-link">
+              Go Somewhere
+            </a>
+            <a class="btn btn-primary" data-lfr-editable-id="${index}-06-link" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-01-06-link">
+              Go Somewhere
+            </a>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    [/#list]
+
+  </div>
+</div>
+<script>
+  const editMode = layoutMode === 'edit';
+
+  const items = [].slice.call(fragmentElement.querySelectorAll('.service-item'));
+
+  const next = fragmentElement.querySelector('.carousel-control-next');
+  const prev = fragmentElement.querySelector('.carousel-control-prev');
+
+  let moving = false;
+
+  function getActiveIndicator() {
+    return fragmentElement.querySelector('.carousel-navigation .active');
+  }
+
+  function activateIndicator(activeItem, nextItem, movement) {
+    if (movement) {
+      activeItem.classList.add(movement);
+      nextItem.classList.add(movement);
+    }
+
+    getActiveIndicator().classList.remove('active');
+    indicators[this.nextItemIndex].classList.add('active');
+  }
+
+  function activateItem(activeItem, nextItem, movement) {
+    activeItem.classList.remove('active');
+    nextItem.classList.add('active');
+
+    if (movement) {
+      activeItem.classList.remove(movement);
+      nextItem.classList.remove(movement);
+    }
+  }
+
+  function move(movement, index = null) {
+    if (moving) {
+      return;
+    }
+
+    moving = true;
+
+    const activeItem = fragmentElement.querySelector('.service-item');
+    const indexActiveItem = items.indexOf(activeItem);
+
+    this.nextItemIndex =
+            indexActiveItem < 1 ? items.length - 1 : indexActiveItem - 1;
+
+    if (index !== null) {
+      this.nextItemIndex = index;
+    }
+    else if (movement === MOVE_RIGHT) {
+      this.nextItemIndex =
+              indexActiveItem >= items.length - 1 ? 0 : indexActiveItem + 1;
+    }
+
+    const nextItem = items[this.nextItemIndex];
+
+    activateIndicator(activeItem, nextItem, movement);
+
+    setTimeout(function () {
+      activateItem(activeItem, nextItem, movement);
+
+      moving = false;
+    }, 600);
+  }
+
+  function createInterval() {
+    let intervalId = null;
+
+    if (!editMode) {
+      intervalId = setInterval(function () {
+        if (document.contains(items[0])) {
+          move(MOVE_RIGHT);
+        }
+        else {
+          clearInterval(intervalId);
+        }
+      }, INTERVAL);
+    }
+
+    return intervalId;
+  }
+
+  (function main() {
+    let intervalId = createInterval();
+
+    if (this.nextItemIndex && this.nextItemIndex < items.length) {
+      const activeItem = fragmentElement.querySelector(
+              '.service-item'
+      );
+      const nextItem = items[this.nextItemIndex];
+
+      activateIndicator(activeItem, nextItem);
+      activateItem(activeItem, nextItem);
+    }
+
+    // prev.addEventListener('click', function () {
+    //   clearInterval(intervalId);
+    //   intervalId = createInterval();
+    //   move(MOVE_LEFT);
+    // });
+    //
+    // next.addEventListener('click', function () {
+    //   clearInterval(intervalId);
+    //   intervalId = createInterval();
+    //   move(MOVE_RIGHT);
+    // });
+
+    indicators.forEach(function (indicator, index) {
+      indicator.addEventListener('click', function () {
+        const indexActiveIndicator = indicators.indexOf(
+                getActiveIndicator()
+        );
+
+        if (index !== indexActiveIndicator) {
+          if (index < indexActiveIndicator) {
+            move(MOVE_LEFT, index);
+          }
+          else {
+            move(MOVE_RIGHT, index);
+          }
+        }
+
+        clearInterval(intervalId);
+        intervalId = createInterval();
+      });
+    });
+  })();
+</script>
+<script !src="">
+  {
+    "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "int",
+          "defaultValue": "4",
+          "label": "number-of-card",
+          "name": "numberOfCards",
+          "type": "link",
+          "typeOptions": {
+            "validation": {
+              "min": 1,
+              "type": "number"
+            }
+          }
+        }
+      ],
+      "label": "card-options"
+    }
+  ]
+  }
+</script>
+</body>
+</html>

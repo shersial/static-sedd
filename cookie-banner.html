@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Banner Fragment</title>
+  <style>
+    .cookie-banner {
+      background-color: var(--gray-200);
+      transition: opacity 1s ease;
+      z-index: 100;
+    }
+
+    .banner-fixed-bottom {
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      right: 0;
+    }
+
+    .banner-fixed-top {
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+<section class="lfr-layout-structure-item-container">
+  <div class="cookie-banner [#if layoutMode != 'edit']${configuration.fixedStyle}[/#if]">
+    <div class="col-12 col-md-8 col-xl-6 container mx-auto py-4 text-center">
+      <div>
+        <p class="mb-3" data-lfr-editable-id="01-text" data-lfr-editable-type="rich-text">
+          This website uses cookies to ensure you get the best experience. <a href="https://www.cookiesandyou.com/">Learn More</a>.
+        </p>
+      </div>
+
+      <a class="btn btn-secondary btn-sm cookie-banner-button" data-lfr-editable-id="02-link" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-03-link">
+        Accept
+      </a>
+      <a class="btn btn-secondary btn-sm cookie-banner-button" data-lfr-editable-id="03-link" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-04-link">
+        Not Accept
+      </a>
+    </div>
+  </div>
+</section>
+
+/**
+* Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+*
+* This library is free software; you can redistribute it and/or modify it under
+* the terms of the GNU Lesser General Public License as published by the Free
+* Software Foundation; either version 2.1 of the License, or (at your option)
+* any later version.
+*
+* This library is distributed in the hope that it will be useful, but WITHOUT
+* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+* FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+* details.
+*/
+
+const button = fragmentElement.querySelector('.cookie-banner-button');
+const cookieBanner = fragmentElement.querySelector('.cookie-banner');
+
+const editMode = layoutMode === 'edit';
+
+function handleButtonClick() {
+hideBanner();
+
+localStorage.setItem('liferay.cookie.consent', 'accepted');
+}
+
+function hideBanner() {
+cookieBanner.style.display = 'none';
+}
+
+function main() {
+if (!editMode) {
+if (localStorage.getItem('liferay.cookie.consent') === 'accepted') {
+hideBanner();
+}
+else {
+button.addEventListener('click', handleButtonClick);
+}
+}
+}
+
+main();
+
+<script src="">
+  {
+    "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "normal",
+          "label": "fixed-style",
+          "name": "fixedStyle",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "label": "none",
+                "value": ""
+              },
+              {
+                "label": "top",
+                "value": "banner-fixed-top"
+              },
+              {
+                "label": "bottom",
+                "value": "banner-fixed-bottom"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  }
+</script>
+</body>
+</html>

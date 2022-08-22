@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes moveLeftActive {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes moveLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveRightActive {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        .home-banner-6x6{
+            background-image: linear-gradient(180deg, rgba(192.00000375509262, 202.00000315904617, 197.0000034570694, 0.23999999463558197) 0%, rgba(255, 255, 255, 0.28999999165534973) 50.33009648323059%, rgba(192.00000375509262, 202.00000315904617, 197.0000034570694, 0.5099999904632568) 100%);
+        }
+        .section-slider6x6{
+            height:665px
+        }
+
+        .section-slider6x6 .carousel {
+            position: relative;
+            height:665px
+        }
+
+        .section-slider6x6 .carousel-caption {
+            bottom: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(50%);
+        }
+
+        .section-slider6x6 .carousel-item {
+            opacity: 0;
+            height:665px;
+            text-align: center;
+        }
+
+
+        .section-slider6x6 .carousel-item.move-right,
+        .section-slider6x6 .carousel-item.move-left {
+            animation-duration: 0.6s;
+            animation-iteration-count: 1;
+            display: block;
+        }
+
+        .section-slider6x6 .carousel-item.active,
+        .section-slider6x6 .carousel-item.move-left,
+        .section-slider6x6 .carousel-item.move-right {
+            opacity: 1;
+        }
+
+        .section-slider6x6 .carousel-item.active {
+            transform: translateX(0);
+            height:665px
+        }
+        .section-slider6x6 .carousel-item a img.w-100{
+
+        }
+
+        .section-slider6x6 .carousel-item.active.move-left {
+            animation-name: moveLeftActive;
+        }
+
+        .section-slider6x6 .carousel-item.move-left {
+            animation-name: moveLeft;
+        }
+
+        .section-slider6x6 .carousel-item.active.move-right {
+            animation-name: moveRightActive;
+        }
+
+        .section-slider6x6 .carousel-item.move-right {
+            animation-name: moveRight;
+        }
+
+        .section-slider6x6 .carousel-navigation {
+            bottom: 50%;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            list-style: none;
+            padding-left: 0;
+            position: absolute;
+            right: 0;
+            z-index: 15;
+            flex-direction: column;
+        }
+
+        .section-slider6x6 .carousel-navigation button {
+            background-color: var(--primary);
+            border: 2px solid var(--brand-color-2);
+            flex: 0 1 auto;
+            height: 30px;
+            margin-left: 3px;
+            margin-right: 3px;
+            position: relative;
+            width: 30px;
+            border-radius:50%;
+        }
+
+        .section-slider6x6 .carousel-navigation button:focus {
+            outline: 0;
+            text-decoration: none;
+        }
+
+        .section-slider6x6 .carousel-navigation button.active {
+            background-color: var(--brand-color-2);
+            border: 2px solid var(--brand-color-2);
+        }
+        .section-slider6x6 .carousel-control-next {
+            right: 0;
+            background: transparent;
+            border: 0;
+        }
+        .section-slider6x6 .carousel-control-prev{
+            left: 0;
+            background: transparent;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="home-banner-6x6">
+    <section class="lfr-layout-structure-item-container">
+        <div class="section-slider6x6">
+            <div class="carousel">
+                <ol class="carousel-navigation">
+<!--                    [#list 0..configuration.numberOfSlides-1 as i]-->
+                    <li>
+                        <button aria-controls="${fragmentEntryLinkNamespace}-carousel-item-${i+1}" aria-label="Focus slide ${i+1}" class="[#if i == 0]active[/#if]" type="button"></button>
+                    </li>
+                    <li>
+                        <button aria-controls="${fragmentEntryLinkNamespace}-carousel-item-${i+1}" aria-label="Focus slide ${i+1}" class="[#if i == 0]active[/#if]" type="button"></button>
+                    </li>
+                    <li>
+                        <button aria-controls="${fragmentEntryLinkNamespace}-carousel-item-${i+1}" aria-label="Focus slide ${i+1}" class="[#if i == 0]active[/#if]" type="button"></button>
+                    </li>
+<!--                    [/#list]-->
+                </ol>
+
+                <div class="carousel-inner " id="${fragmentEntryLinkNamespace}-carouselInner" role="group">
+<!--                    [#list 0..configuration.numberOfSlides-1 as i]-->
+<!--                    [#assign index = "${i+1}" /]-->
+
+<!--                    [#if i lt 9]-->
+<!--                    [#assign index = "0${i+1}" /]-->
+<!--                    [/#if]-->
+
+                    <div class="[#if i == 0]active[/#if] carousel-item" id="${fragmentEntryLinkNamespace}-carousel-item-${i+1}">
+                        <div class="item-wrap d-md-flex">
+                            <div data-lfr-background-image-id="${index}-01-image"  class=" img order-md-last">
+                                <lfr-editable id="${index}-02-image" type="image">
+                                    <img alt=""  src="" />
+                                </lfr-editable>
+                            </div>
+
+
+                            <div class="carousel-caption b-md-block  d-none text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+                                <div data-lfr-editable-id="${index}-01-title" data-lfr-editable-type="rich-text" class="clearfix mb-4">
+                                    <h2>
+                                        Slide ${i+1} Title
+                                        Define <br> Your Budget
+                                    </h2>
+                                </div>
+                                <div class="clearfix mb-4" data-lfr-editable-id="${index}-01-subtitle" data-lfr-editable-type="rich-text">
+                                    <p>
+                                        Slide ${i+1} Subtitle
+                                    </p>
+                                </div>
+                                <div class="clearfix mb-4" data-lfr-editable-id="${index}-02-subtitle" data-lfr-editable-type="rich-text">
+                                    <p class="h5">
+                                        Slide ${i+1} Subtitle
+                                    </p>
+                                </div>
+                                <div class=" clearfix row justify-content-end" data-lfr-editable-id="${index}-03-subtitle" data-lfr-editable-type="rich-text">
+                                    <div class="col-xl-8">
+                                        <p>Slide ${i+1} Text</p>
+                                    </div>
+                                </div>
+                                <p>
+                                    <button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+                                    <button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+<!--                    [/#list]-->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script !src="">
+    const MOVE_LEFT = 'move-left';
+    const MOVE_RIGHT = 'move-right';
+    const INTERVAL = 5000;
+
+    const editMode = layoutMode === 'edit';
+    const indicators = [].slice.call(
+        fragmentElement.querySelectorAll('.carousel-navigation button')
+    );
+    const items = [].slice.call(fragmentElement.querySelectorAll('.carousel-item'));
+
+    let moving = false;
+
+    function getActiveIndicator() {
+        return fragmentElement.querySelector('.carousel-navigation .active');
+    }
+
+    function activateIndicator(activeItem, nextItem, movement) {
+        if (movement) {
+            activeItem.classList.add(movement);
+            nextItem.classList.add(movement);
+        }
+
+        getActiveIndicator().classList.remove('active');
+        indicators[this.nextItemIndex].classList.add('active');
+    }
+
+    function activateItem(activeItem, nextItem, movement) {
+        activeItem.classList.remove('active');
+        nextItem.classList.add('active');
+
+        if (movement) {
+            activeItem.classList.remove(movement);
+            nextItem.classList.remove(movement);
+        }
+    }
+
+    function move(movement, index = null) {
+        if (moving) {
+            return;
+        }
+
+        moving = true;
+
+        const activeItem = fragmentElement.querySelector('.carousel-item.active');
+        const indexActiveItem = items.indexOf(activeItem);
+
+        this.nextItemIndex = index;
+
+        if (index === null) {
+            this.nextItemIndex =
+                indexActiveItem >= items.length - 1 ? 0 : indexActiveItem + 1;
+        }
+
+        const nextItem = items[this.nextItemIndex];
+
+        activateIndicator(activeItem, nextItem, movement);
+
+        setTimeout(function () {
+            activateItem(activeItem, nextItem, movement);
+
+            moving = false;
+        }, 600);
+    }
+
+    function createInterval() {
+        let intervalId = null;
+
+        if (!editMode) {
+            intervalId = setInterval(function () {
+                if (document.contains(items[0])) {
+                    move(MOVE_RIGHT);
+                }
+                else {
+                    clearInterval(intervalId);
+                }
+            }, INTERVAL);
+        }
+
+        return intervalId;
+    }
+
+    (function main() {
+        let intervalId = createInterval();
+
+        if (this.nextItemIndex && this.nextItemIndex < items.length) {
+            const activeItem = fragmentElement.querySelector(
+                '.carousel-item.active'
+            );
+            const nextItem = items[this.nextItemIndex];
+
+            activateIndicator(activeItem, nextItem);
+            activateItem(activeItem, nextItem);
+        }
+
+        indicators.forEach(function (indicator, index) {
+            indicator.addEventListener('click', function () {
+                const indexActiveIndicator = indicators.indexOf(
+                    getActiveIndicator()
+                );
+
+                if (index !== indexActiveIndicator) {
+                    if (index < indexActiveIndicator) {
+                        move(MOVE_LEFT, index);
+                    }
+                    else {
+                        move(MOVE_RIGHT, index);
+                    }
+                }
+
+                clearInterval(intervalId);
+                intervalId = createInterval();
+            });
+        });
+    })();
+</script>
+<script src="assets/dist/js/jquery-3.6.0.js"></script>
+</body>
+</html>
